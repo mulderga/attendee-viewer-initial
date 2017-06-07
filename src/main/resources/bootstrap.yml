@@ -5,7 +5,9 @@ spring:
     name: attendee-viewer
   cloud:
     config:
-      uri: ${vcap.services.config-server.credentials.uri}   
+      uri: ${vcap.services.config-server.credentials.uri}
+      username: timandgerard
+      password: herpderp
     
 management:
   security:
