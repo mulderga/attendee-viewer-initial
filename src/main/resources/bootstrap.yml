@@ -2,7 +2,7 @@
 
 spring:
   application:
-    name: attendee-viewer
+    name: attendee
   cloud:
     config:
       uri: ${vcap.services.config-service.credentials.uri}
