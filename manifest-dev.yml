@@ -1,0 +1,8 @@
+---
+applications:
+- name: attendee
+  random-route: false
+  instances: 1
+  memory: 512MB
+  buildpack: java_buildpack
+  path: ./build/libs/attendee.jar
