@@ -12,7 +12,6 @@ public class RosterClientFallback implements RosterClient {
 
 	@Override
 	public PagedResources<Attendee> getAttendees(int page) {
-		// derp
 		List<Attendee> attendees = new ArrayList<>();
 		attendees.add(new Attendee());
 		return new PagedResources<>(attendees, new PagedResources.PageMetadata(1, 1, 1, 1), new Link("/"));
