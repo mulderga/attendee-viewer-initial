@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "roster")
+@FeignClient(name = "roster", fallback = RosterClientFallback.class)
 public interface RosterClient {
 
-    @RequestMapping(method = RequestMethod.GET, value = "/people")
-    PagedResources<Attendee> getAttendees(@RequestParam("page") int page);
+	@RequestMapping(method = RequestMethod.GET, value = "/people")
+	PagedResources<Attendee> getAttendees(@RequestParam("page") int page);
 
-    @RequestMapping(method = RequestMethod.GET, value = "/people/{attendeeId}")
-    Attendee getAttendee(@PathVariable("attendeeId") String attendeeId);
-    
+	@RequestMapping(method = RequestMethod.GET, value = "/people/{attendeeId}")
+	Attendee getAttendee(@PathVariable("attendeeId") String attendeeId);
+
 }
