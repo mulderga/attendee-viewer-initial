@@ -3,7 +3,7 @@ applications:
 - name: attendee
   random-route: false
   instances: 1
-  memory: 512MB
+  memory: 1G
   buildpack: java_buildpack
   services:
    - config-service
